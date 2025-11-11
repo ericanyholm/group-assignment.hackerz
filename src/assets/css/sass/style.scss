@@ -28,6 +28,8 @@ body {
   font-size: 13pt;
   color: black;
 }
+
+/*------Stats section------*/
 .stats {
   display: flex; // turns section into a flex container
   justify-content: center; // centers all items horizontally
@@ -39,6 +41,45 @@ body {
     padding: 10px 20px; // padding inside each div
     border-radius: 8px; // optional: rounded corners
     text-align: center; // centers text inside each box
+  }
+  .contact {
+    padding: 40px;
+    text-align: center;
+
+    /*------Contact section------*/
+    .contact-header {
+      h2 {
+        margin-bottom: 30px;
+      }
+    }
+
+    .contact-info {
+      display: flex;
+      text-align: start;
+      justify-content: left;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 30px;
+
+      div {
+        background-color: #ffffff00;
+        padding: 20px;
+        border-radius: 8px;
+        width: 200px;
+      }
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: right;
+      gap: 20px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+    }
   }
 }
 

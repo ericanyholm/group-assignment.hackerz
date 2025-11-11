@@ -571,6 +571,7 @@ body {
   display: block;
   overflow: hidden;
 }
+/*------STATS SECTION-----*/
 .stats {
   display: flex; /* turns section into a flex container */
   justify-content: center; /* centers all items horizontally */
@@ -583,6 +584,45 @@ body {
   padding: 10px 20px; /* padding inside each div */
   border-radius: 8px; /* optional: rounded corners */
   text-align: left; /* centers text inside each box */
+}
+.contact {
+  padding: 40px;
+  text-align: center;
+}
+
+/*------CONTACT SECTION-----*/
+.contact-header h2 {
+  display: flex;
+  text-align: start;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  text-align: start;
+  justify-content: center;
+  align-items: start;
+  gap: 90px;
+  margin-bottom: 30px;
+}
+
+.contact-info div {
+  background-color: #ffffff00;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}
+
+.contact-icons img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 /*------FOOTER-----*/
