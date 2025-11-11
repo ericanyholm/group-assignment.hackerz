@@ -8,7 +8,6 @@ Version: 1.0
 @import "fonts.scss"; /*Fonts SASS file*/
 @import "header.scss"; /*Header SASS file*/
 @import "articles.scss"; /*Articles SASS file*/
-@import "style.infopages";
 
 html {
   width: 100%;
@@ -34,13 +33,7 @@ body {
   gap: 20px; // space between each item
   padding: 20px; // space inside the section
 
-  div {
-    background-color: #ffffff00; // optional: gives each box a light background
-    padding: 10px 20px; // padding inside each div
-    border-radius: 8px; // optional: rounded corners
-    text-align: center; // centers text inside each box
-  }
-}
+@media screen and (max-width : 1024px) {
 
 @media screen and (max-width: 1024px) {
   /*All Devices*/
@@ -71,8 +64,10 @@ body {
   overflow: hidden;
 }
 
+  
 /*------FOOTER-----*/
 
 #footer {
   width: 100%;
 }
+}}
