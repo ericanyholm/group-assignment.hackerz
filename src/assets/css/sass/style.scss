@@ -8,11 +8,11 @@ Version: 1.0
 @import "fonts.scss"; /*Fonts SASS file*/
 @import "header.scss"; /*Header SASS file*/
 @import "articles.scss"; /*Articles SASS file*/
-@import 'style.infopages';
+@import "style.infopages";
 
 html {
   width: 100%;
-  margin:0;
+  margin: 0;
   border-top: 2px solid $link-hover;
 }
 
@@ -22,33 +22,46 @@ body {
   display: block;
   clear: both;
   padding: 0;
-  margin:0px auto;
+  margin: 0px auto;
   box-sizing: border-box;
-	font-family:$primary-font;
-	font-size:13pt;
-	color:black;
+  font-family: $primary-font;
+  font-size: 13pt;
+  color: black;
+}
+.stats {
+  display: flex; // turns section into a flex container
+  justify-content: center; // centers all items horizontally
+  gap: 20px; // space between each item
+  padding: 20px; // space inside the section
+
+  div {
+    background-color: #ffffff00; // optional: gives each box a light background
+    padding: 10px 20px; // padding inside each div
+    border-radius: 8px; // optional: rounded corners
+    text-align: center; // centers text inside each box
+  }
 }
 
-@media screen and (max-width : 1024px) {
+@media screen and (max-width: 1024px) {
+  /*All Devices*/
 
-	/*All Devices*/
+  html.touch *:hover {
+    pointer-events: none !important;
+  }
 
-	html.touch *:hover {
-    	pointer-events: none !important;
-	}
+  html,
+  body {
+    width: 100% !important;
+    margin: 0px !important;
+    overflow-x: hidden !important;
+    -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+  }
 
-	html, body {
-		width:100% !important;
-		margin:0px !important;
-		overflow-x:hidden !important;
-		-webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
-	}
-
-	body {
-		margin: 0 0 20px;
-		height:auto;
-		min-height:100%;
-	}
+  body {
+    margin: 0 0 20px;
+    height: auto;
+    min-height: 100%;
+  }
 }
 
 #content {
@@ -61,5 +74,5 @@ body {
 /*------FOOTER-----*/
 
 #footer {
-	width: 100%;
+  width: 100%;
 }
