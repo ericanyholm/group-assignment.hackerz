@@ -586,8 +586,15 @@ body {
 }
 
 /*------FOOTER-----*/
-#footer {
+.footer {
   width: 100%;
+  border-top: 1px solid #999;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
