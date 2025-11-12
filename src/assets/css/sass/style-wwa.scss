@@ -1,3 +1,8 @@
+@import "./colors.scss";
+@import "./mixin.scss";
+@import "./fonts.scss";
+@import "./header.scss";
+@import "./articles.scss";
 /*------Stats section------*/
 .stats {
   display: flex; // turns section into a flex container
@@ -15,43 +20,40 @@
     padding: 40px;
     text-align: center;
   }}
-
 /* =========================================
-   TEAM SECTION (Matchar Figma-designen)
+   TEAM SECTION 
    ========================================= */
 
 #team-container {
   width: 100%;
-  padding: 100px 107px 50px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
   gap: 35px;
   box-sizing: border-box;
   position: relative;
 
   .team-heading {
-    color: black;
-    font-size: 19px;
-    font-family: "Playfair Display", serif;
+    font-family: $primary-font;
     font-weight: 700;
+    color: black;
+    @include size(19, 25);
     word-wrap: break-word;
   }
 
   .team-grid {
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
     gap: 35px;
+    justify-content: flex-start;
+    align-content: flex-start;
   }
 
   .team-member {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     gap: 11px;
+    align-items: flex-start;
 
     img {
       width: 175px;
@@ -61,73 +63,40 @@
     }
 
     h3 {
-      color: black;
-      font-size: 19px;
-      font-family: "Playfair Display", serif;
+      font-family: $primary-font;
       font-weight: 700;
+      color: black;
       margin: 0;
-      line-height: 1.2;
+      @include size(19, 22);
     }
 
     p {
-      color: black;
-      font-size: 14px;
-      font-family: "Open Sans", sans-serif;
+      font-family: $secondary-font;
       font-weight: 400;
+      color: black;
       margin: 0;
+      @include size(14, 20);
     }
-  }
 
-  /* ============================
-     RESPONSIVE BREAKPOINTS
-     ============================ */
 
   @media (max-width: 992px) {
     padding: 80px 60px 40px;
-
-    .team-grid {
-      gap: 25px;
-    }
-
-    .team-member img {
-      width: 160px;
-      height: 260px;
-    }
+    .team-grid { gap: 25px; }
+    .team-member img { width: 160px; height: 260px; }
   }
 
   @media (max-width: 768px) {
     padding: 70px 40px 35px;
-
-    .team-grid {
-      justify-content: center;
-    }
-
-    .team-member img {
-      width: 150px;
-      height: 240px;
-    }
+    .team-grid { justify-content: center; }
+    .team-member img { width: 150px; height: 240px; }
   }
 
   @media (max-width: 480px) {
     padding: 60px 20px 30px;
     align-items: center;
-
-    .team-grid {
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .team-member img {
-      width: 140px;
-      height: 230px;
-    }
-
-    .team-member h3 {
-      font-size: 17px;
-    }
-
-    .team-member p {
-      font-size: 13px;
-    }
+    .team-grid { justify-content: center; gap: 20px; }
+    .team-member img { width: 140px; height: 230px; }
+    .team-member h3 { @include size(17, 20); }
+    .team-member p { @include size(13, 18); }
   }
-}
+}}

@@ -29,7 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const container = document.getElementById("team-container");
 
-  teamMembers.forEach((member) => {
+ // Lägg till rubrik
+  const heading = document.createElement("h2");
+  heading.classList.add("team-heading");
+  heading.textContent = "Meet the team";
+  container.appendChild(heading);
+
+  // Skapa grid-container
+  const grid = document.createElement("div");
+  grid.classList.add("team-grid");
+  container.appendChild(grid);
+
+  // Lägg till teammedlemmar
+  teamMembers.forEach((member, index) => {
     const div = document.createElement("div");
     div.classList.add("team-member");
 
@@ -39,6 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
       <p>${member.role}</p>
     `;
 
-    container.appendChild(div);
+    grid.appendChild(div);
+
+    // Lägg till animation med liten delay per medlem
+    setTimeout(() => {
+      div.classList.add("moveUp");
+    }, index * 150);
   });
 });
