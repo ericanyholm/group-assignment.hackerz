@@ -31,8 +31,10 @@
 /* =========================================
    TEAM SECTION 
    ========================================= */
-
 #team-container {
+padding-top: 50px;
+padding-bottom: 50px;
+ max-width: 1225px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -68,6 +70,7 @@
       height: 290px;
       object-fit: cover;
       border-radius: 2px;
+      transition: all 0.3s ease;
     }
 
     h3 {
@@ -85,6 +88,7 @@
       margin: 0;
       @include size(14, 20);
     }
+  }
 
     @media (max-width: 992px) {
       padding: 80px 60px 40px;
@@ -127,4 +131,3 @@
       }
     }
   }
-}
