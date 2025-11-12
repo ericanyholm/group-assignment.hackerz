@@ -4,6 +4,11 @@
 @import "./header.scss";
 @import "./articles.scss";
 
+/*------Hero image------*/
+.hero-image {
+  width: 110%;
+  height: auto;
+}
 /*------Stats section------*/
 .stats {
   display: flex; // turns section into a flex container
