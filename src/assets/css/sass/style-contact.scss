@@ -6,7 +6,8 @@
 
 /*------Hero image------*/
 .hero-image {
-  width: 110%;
+  width: 120%;
+  margin-left: -8%;
   height: auto;
 }
 
@@ -75,67 +76,67 @@
       aspect-ratio: 1226 / 287;
     }
   }
-/* =========================================
+  /* =========================================
  TEAM SECTION 
 ========================================= */
-#team-container {
-padding-top: 50px;
-padding-bottom: 50px;
- max-width: 1225px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 35px;
-  box-sizing: border-box;
-  position: relative;
-
-  .team-heading {
-    font-family: $primary-font;
-    font-weight: 700;
-    color: black;
-    @include size(19, 25);
-    word-wrap: break-word;
-  }
-
-  .team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 35px;
-    justify-content: flex-start;
-    align-content: flex-start;
-  }
-
-  .team-member {
+  #team-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 1225px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 11px;
     align-items: flex-start;
+    gap: 35px;
+    box-sizing: border-box;
+    position: relative;
 
-    img {
-      width: 175px;
-      height: 290px;
-      object-fit: cover;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    h3 {
+    .team-heading {
       font-family: $primary-font;
       font-weight: 700;
       color: black;
-      margin: 0;
-      @include size(19, 22);
+      @include size(19, 25);
+      word-wrap: break-word;
     }
 
-    p {
-      font-family: $secondary-font;
-      font-weight: 400;
-      color: black;
-      margin: 0;
-      @include size(14, 20);
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px;
+      justify-content: flex-start;
+      align-content: flex-start;
     }
-  }
+
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      align-items: flex-start;
+
+      img {
+        width: 175px;
+        height: 290px;
+        object-fit: cover;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
+      h3 {
+        font-family: $primary-font;
+        font-weight: 700;
+        color: black;
+        margin: 0;
+        @include size(19, 22);
+      }
+
+      p {
+        font-family: $secondary-font;
+        font-weight: 400;
+        color: black;
+        margin: 0;
+        @include size(14, 20);
+      }
+    }
 
     @media (max-width: 992px) {
       padding: 80px 60px 40px;
