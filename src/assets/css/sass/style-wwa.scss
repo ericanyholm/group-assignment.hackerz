@@ -1,3 +1,21 @@
+/*------Stats section------*/
+.stats {
+  display: flex; // turns section into a flex container
+  justify-content: center; // centers all items horizontally
+  gap: 20px; // space between each item
+  padding: 20px; // space inside the section
+
+  div {
+    background-color: #ffffff00; // optional: gives each box a light background
+    padding: 10px 20px; // padding inside each div
+    border-radius: 8px; // optional: rounded corners
+    text-align: center; // centers text inside each box
+  }
+  .contact {
+    padding: 40px;
+    text-align: center;
+  }}
+
 /* =========================================
    TEAM SECTION (Matchar Figma-designen)
    ========================================= */
