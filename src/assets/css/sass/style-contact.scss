@@ -10,6 +10,18 @@
   margin-left: -8%;
   height: auto;
 }
+
+main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*------Contact section------*/
 .contact-header {
   text-align: left;
@@ -32,17 +44,9 @@
 
 .contact-info {
   display: flex;
-<<<<<<< HEAD
   flex: 1;
   justify-content: flex-start;
   gap: 60px;
-=======
-  text-align: start;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 80px;
-  margin-bottom: 30px;
->>>>>>> origin/main
 
   div {
     width: 200px;
