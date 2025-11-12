@@ -1,9 +1,16 @@
 // src/assets/js/team.js
 document.addEventListener("DOMContentLoaded", () => {
   // Parcel-kompatibla bilder
-  const profileFemale = new URL("../../img/profile-pic-female.png", import.meta.url).href;
-  const profileMale = new URL("../../img/profile-pic-male.png", import.meta.url).href;
-  const anthonyProfile = new URL("../../img/anthonyprofil.png", import.meta.url).href;
+  const profileFemale = new URL(
+    "../../img/profile-pic-female.png",
+    import.meta.url
+  ).href;
+  const profileMale = new URL("../../img/profile-pic-male.png", import.meta.url)
+    .href;
+  const anthonyProfile = new URL(
+    "../../img/profile-pic-male.png",
+    import.meta.url
+  ).href;
 
   const teamMembers = [
     { name: "Melissa Humble", role: "CEO", img: profileFemale },
@@ -17,12 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Daniel Martinez", role: "Sales", img: profileMale },
     { name: "Olivia Garcia", role: "Support", img: profileFemale },
     { name: "James Anderson", role: "Intern", img: profileMale },
-    { name: "Ava Thomas", role: "Consultant", img: profileFemale }
+    { name: "Ava Thomas", role: "Consultant", img: profileFemale },
   ];
 
   const container = document.getElementById("team-container");
 
-  teamMembers.forEach(member => {
+  teamMembers.forEach((member) => {
     const div = document.createElement("div");
     div.classList.add("team-member");
 
