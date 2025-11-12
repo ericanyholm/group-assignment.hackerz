@@ -629,20 +629,20 @@ body {
 .footer {
   width: 100%;
   border-top: 1px solid #999;
-  padding: 40px 107px;              /* 40px top/bottom, 107px left/right */
+  padding: 40px 107px; /* 40px top/bottom, 107px left/right */
+  margin-left: -8%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 3rem;
   margin-bottom: 1rem;
 }
 
 /* Alla boxar (de inre div:arna) */
 .footer > div {
-  background-color: #fff;           /* valfritt, för att se var boxarna är */
-  padding: 10px 12px;               /* standard för alla boxar */
-  flex: 1 0 0;                      /* lika breda sektioner */
-  box-sizing: border-box;           /* så padding inte påverkar bredden */
+  background-color: #fff; /* valfritt, för att se var boxarna är */
+  padding: 10px 12px; /* standard för alla boxar */
+  flex: 1 0 0; /* lika breda sektioner */
+  box-sizing: border-box; /* så padding inte påverkar bredden */
 }
 
 /* Första boxen (ingen padding vänster) */
