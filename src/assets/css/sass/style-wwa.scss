@@ -20,7 +20,9 @@
   .contact {
     padding: 40px;
     text-align: center;
-  }}
+  }
+}
+
 /* =========================================
    TEAM SECTION 
    ========================================= */
@@ -79,25 +81,45 @@
       @include size(14, 20);
     }
 
+    @media (max-width: 992px) {
+      padding: 80px 60px 40px;
+      .team-grid {
+        gap: 25px;
+      }
+      .team-member img {
+        width: 160px;
+        height: 260px;
+      }
+    }
 
-  @media (max-width: 992px) {
-    padding: 80px 60px 40px;
-    .team-grid { gap: 25px; }
-    .team-member img { width: 160px; height: 260px; }
-  }
+    @media (max-width: 768px) {
+      padding: 70px 40px 35px;
+      .team-grid {
+        justify-content: center;
+      }
+      .team-member img {
+        width: 150px;
+        height: 240px;
+      }
+    }
 
-  @media (max-width: 768px) {
-    padding: 70px 40px 35px;
-    .team-grid { justify-content: center; }
-    .team-member img { width: 150px; height: 240px; }
+    @media (max-width: 480px) {
+      padding: 60px 20px 30px;
+      align-items: center;
+      .team-grid {
+        justify-content: center;
+        gap: 20px;
+      }
+      .team-member img {
+        width: 140px;
+        height: 230px;
+      }
+      .team-member h3 {
+        @include size(17, 20);
+      }
+      .team-member p {
+        @include size(13, 18);
+      }
+    }
   }
-
-  @media (max-width: 480px) {
-    padding: 60px 20px 30px;
-    align-items: center;
-    .team-grid { justify-content: center; gap: 20px; }
-    .team-member img { width: 140px; height: 230px; }
-    .team-member h3 { @include size(17, 20); }
-    .team-member p { @include size(13, 18); }
-  }
-}}
+}
