@@ -1,16 +1,9 @@
 // src/assets/js/team.js
 document.addEventListener("DOMContentLoaded", () => {
   // Parcel-kompatibla bilder
-  const profileFemale = new URL(
-    "../../img/profile-pic-female.png",
-    import.meta.url
-  ).href;
-  const profileMale = new URL("../../img/profile-pic-male.png", import.meta.url)
-    .href;
-  const anthonyProfile = new URL(
-    "../../img/profile-pic-male.png",
-    import.meta.url
-  ).href;
+  const profileFemale = new URL("../../img/profile-pic-female.png",import.meta.url).href;
+  const profileMale = new URL("../../img/profile-pic-male.png", import.meta.url).href;
+  const anthonyProfile = new URL("../../img/anthony-profil-pic.jpeg",import.meta.url).href;
 
   const teamMembers = [
     { name: "Melissa Humble", role: "CEO", img: profileFemale },
