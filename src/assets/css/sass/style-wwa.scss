@@ -28,13 +28,24 @@
   }
 }
 
+main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* =========================================
    TEAM SECTION 
    ========================================= */
 #team-container {
-padding-top: 50px;
-padding-bottom: 50px;
- max-width: 1225px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 1225px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -90,44 +101,44 @@ padding-bottom: 50px;
     }
   }
 
-    @media (max-width: 992px) {
-      padding: 80px 60px 40px;
-      .team-grid {
-        gap: 25px;
-      }
-      .team-member img {
-        width: 160px;
-        height: 260px;
-      }
+  @media (max-width: 992px) {
+    padding: 80px 60px 40px;
+    .team-grid {
+      gap: 25px;
     }
-
-    @media (max-width: 768px) {
-      padding: 70px 40px 35px;
-      .team-grid {
-        justify-content: center;
-      }
-      .team-member img {
-        width: 150px;
-        height: 240px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      padding: 60px 20px 30px;
-      align-items: center;
-      .team-grid {
-        justify-content: center;
-        gap: 20px;
-      }
-      .team-member img {
-        width: 140px;
-        height: 230px;
-      }
-      .team-member h3 {
-        @include size(17, 20);
-      }
-      .team-member p {
-        @include size(13, 18);
-      }
+    .team-member img {
+      width: 160px;
+      height: 260px;
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 70px 40px 35px;
+    .team-grid {
+      justify-content: center;
+    }
+    .team-member img {
+      width: 150px;
+      height: 240px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 60px 20px 30px;
+    align-items: center;
+    .team-grid {
+      justify-content: center;
+      gap: 20px;
+    }
+    .team-member img {
+      width: 140px;
+      height: 230px;
+    }
+    .team-member h3 {
+      @include size(17, 20);
+    }
+    .team-member p {
+      @include size(13, 18);
+    }
+  }
+}
