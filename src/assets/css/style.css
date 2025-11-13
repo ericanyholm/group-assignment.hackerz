@@ -578,6 +578,7 @@ hr {
   background: #999;
   width: 150%;
   margin-left: -10%;
+  margin-top: 50px;
 }
 
 /*------FOOTER-----*/
@@ -585,7 +586,7 @@ footer {
   position: relative;
   width: 100%;
   padding: 40px 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   background-color: #fff;
   overflow: hidden; /* VIKTIGT – hindrar scroll! */
 }
