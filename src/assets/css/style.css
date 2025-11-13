@@ -572,6 +572,14 @@ body {
   overflow: hidden;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background: #999;
+  width: 150%;
+  margin-left: -10%;
+}
+
 /*------FOOTER-----*/
 footer {
   position: relative;
@@ -643,50 +651,75 @@ footer {
 }
 
 /* 768px – Small tablet / Landscape phone */
-@media (max-width: 768px) {
+/* ----- 1024px ----- */
+@media (max-width: 1024px) {
   footer {
-    padding: 30px 0;
+    padding: 80px 60px 40px;
+
+    .content-footer {
+      gap: 25px;
+    }
+
+    .content-footer h3 {
+      font-size: 1.1rem;
+    }
+
+    .content-footer p {
+      font-size: 0.95rem;
+    }
   }
 
-  .content-footer {
-    flex-direction: column;
-    gap: 20px;
+  /* ----- 768px ----- */
+  @media (max-width: 768px) {
+    footer {
+      padding: 70px 40px 35px;
+    }
+
+    .content-footer {
+      flex-direction: column;
+      justify-content: start;
+      align-items: left;
+      gap: 20px;
+    }
+
+    .content-footer > div {
+      min-width: auto;
+      text-align: left;
+    }
+
+    .hodor > div:last-child {
+      text-align: center;
+      font-size: 0.85rem;
+    }
   }
 
-  .content-footer > div {
-    min-width: auto;
-  }
+  /* ----- 480px ----- */
+  @media (max-width: 480px) {
+    footer {
+      padding: 60px 20px 30px;
+      align-items: center;
+    }
 
-  .hodor > div:last-child {
-    text-align: center;
-    font-size: 0.85rem;
-  }
-}
+    .hodor {
+      padding: 0 15px;
+    }
 
-/* 480px – Mobile */
-@media (max-width: 480px) {
-  footer {
-    padding: 20px 0;
-  }
+    .content-footer {
+      justify-content: center;
+      gap: 18px;
+    }
 
-  .hodor {
-    padding: 0 15px;
-  }
+    .content-footer h3 {
+      font-size: 1rem;
+    }
 
-  .content-footer {
-    gap: 18px;
-  }
+    .content-footer p,
+    .hodor > div:last-child {
+      font-size: 0.85rem;
+    }
 
-  .content-footer h3 {
-    font-size: 1rem;
-  }
-
-  .content-footer p,
-  .hodor > div:last-child {
-    font-size: 0.85rem;
-  }
-
-  .hodor > div:last-child {
-    text-align: center;
+    .hodor > div:last-child {
+      text-align: center;
+    }
   }
 }
