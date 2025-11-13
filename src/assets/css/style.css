@@ -571,83 +571,122 @@ body {
   display: block;
   overflow: hidden;
 }
-/*------STATS SECTION-----*/
-.stats {
-  display: flex; /* turns section into a flex container */
-  justify-content: center; /* centers all items horizontally */
-  gap: 100px; /* space between each item */
-  padding: "" px; /* space inside the section */
-}
-
-.stats div {
-  background-color: #ffffff00; /* optional: gives each box a light background */
-  padding: 10px 20px; /* padding inside each div */
-  border-radius: 8px; /* optional: rounded corners */
-  text-align: left; /* centers text inside each box */
-}
-.contact {
-  padding: 40px;
-  text-align: center;
-}
-
-/*------CONTACT SECTION-----*/
-.contact-header h2 {
-  display: flex;
-  text-align: start;
-  margin-bottom: 30px;
-}
-
-.contact-info {
-  display: flex;
-  text-align: start;
-  justify-content: center;
-  align-items: start;
-  gap: 90px;
-  margin-bottom: 30px;
-}
-
-.contact-info div {
-  background-color: #ffffff00;
-  padding: 20px;
-  border-radius: 8px;
-  width: 200px;
-}
-
-.contact-icons {
-  display: flex;
-  justify-content: right;
-  gap: 20px;
-}
-
-.contact-icons img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
 
 /*------FOOTER-----*/
-.footer {
+footer {
+  position: relative;
   width: 100%;
-  border-top: 1px solid #999;
-  padding: 40px 107px; /* 40px top/bottom, 107px left/right */
-  margin-left: -8%;
+  padding: 40px 0;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  overflow: hidden; /* VIKTIGT – hindrar scroll! */
+}
+
+/* Inre container – max 1235px, centrerad */
+.hodor {
+  position: relative;
+  z-index: 2; /* Ovanför border */
+  max-width: 1235px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1rem;
+  gap: 30px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.content-footer {
+  flex: 0 0 auto;
+  max-width: 680px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-/* Alla boxar (de inre div:arna) */
-.footer > div {
-  background-color: #fff; /* valfritt, för att se var boxarna är */
-  padding: 10px 12px; /* standard för alla boxar */
-  flex: 1 0 0; /* lika breda sektioner */
-  box-sizing: border-box; /* så padding inte påverkar bredden */
+.content-footer > div {
+  flex: 1;
+  min-width: 180px;
+}
+.hodor > div:last-child {
+  flex: 0 0 251px;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0;
+  align-self: flex-start;
+}
+/* ====================================
+   MEDIA QUERIES
+   ==================================== */
+
+/* 1024px – Tablet: stapla vertikalt */
+@media (max-width: 1024px) {
+  .hodor {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .content-footer {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hodor > div:last-child {
+    width: 100%;
+    flex: 0 0 auto;
+    text-align: left;
+    margin-top: 10px;
+  }
 }
 
-/* Första boxen (ingen padding vänster) */
-.footer > div:first-child {
-  padding: 10px 12px 10px 0;
+/* 768px – Small tablet / Landscape phone */
+@media (max-width: 768px) {
+  footer {
+    padding: 30px 0;
+  }
+
+  .content-footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content-footer > div {
+    min-width: auto;
+  }
+
+  .hodor > div:last-child {
+    text-align: center;
+    font-size: 0.85rem;
+  }
 }
 
-/*# sourceMappingURL=style.css.map */
+/* 480px – Mobile */
+@media (max-width: 480px) {
+  footer {
+    padding: 20px 0;
+  }
+
+  .hodor {
+    padding: 0 15px;
+  }
+
+  .content-footer {
+    gap: 18px;
+  }
+
+  .content-footer h3 {
+    font-size: 1rem;
+  }
+
+  .content-footer p,
+  .hodor > div:last-child {
+    font-size: 0.85rem;
+  }
+
+  .hodor > div:last-child {
+    text-align: center;
+  }
+}
