@@ -3,14 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // Parcel-kompatibla bilder
   const profileFemale = new URL("../../img/profile-pic-female.png",import.meta.url).href;
   const profileMale = new URL("../../img/profile-pic-male.png", import.meta.url).href;
-  const anthonyProfile = new URL("../../img/anthony-profil-pic.jpeg",import.meta.url).href;
+  const EmmaL = new URL("../../img/emmal-profile-ballon.jpeg",import.meta.url).href;
+  const EmmaH = new URL("../../img/emma-profile-ballon.png",import.meta.url).href;
+  const AnnaS = new URL("../../img/anna-profile-ballon.png",import.meta.url).href;
+  const EricaB = new URL("../../img/erica-profile-ballon.png",import.meta.url).href;
+  const Anthony = new URL("../../img/anthony-profil-pic.jpeg",import.meta.url).href;
 
   const teamMembers = [
-    { name: "Melissa Humble", role: "CEO", img: profileFemale },
-    { name: "Anthony Example", role: "CTO", img: anthonyProfile },
-    { name: "John Doe", role: "CFO", img: profileMale },
-    { name: "Jane Smith", role: "CMO", img: profileFemale },
-    { name: "Michael Brown", role: "Lead Developer", img: profileMale },
+    { name: "Emma VG Lokander", role: "Codemaster2000X", img: EmmaL },
+    { name: "Anthony Josefsson", role: "ProGitter5x", img: Anthony },
+    { name: "Emma Hansson", role: "Image-fixer", img: EmmaH },
+    { name: "Erica Bååth Nyholm", role: "Snorproducent", img: EricaB },
+    { name: "Anna Scavo", role: "Bot", img: AnnaS },
     { name: "Emily Johnson", role: "Designer", img: profileFemale },
     { name: "David Wilson", role: "Marketing", img: profileMale },
     { name: "Sophia Davis", role: "HR", img: profileFemale },
@@ -38,8 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const div = document.createElement("div");
     div.classList.add("team-member");
 
+    const altText = `Porträtt av ${member.name}, ${member.role}`;
     div.innerHTML = `
-      <img src="${member.img}" alt="${member.name}" />
+      <img src="${member.img}" alt="${altText}" />
       <h3>${member.name}</h3>
       <p>${member.role}</p>
     `;
