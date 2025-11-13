@@ -3,3 +3,8 @@ node_modules/
 dist/
 package.json
 package-lock.json
+# Parcel & SASS genererade filer
+*.css
+*.css.map
+.parcel-cache/
+dist/
